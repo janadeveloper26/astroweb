@@ -8,7 +8,7 @@ export default function About({ onScrollTo }) {
         {/* Section Header */}
         <div className="section-header-center">
           <span className="section-tag">About Our Lineage</span>
-          <h2 className="section-title">About Sivachandra Nadi</h2>
+          <h2 className="section-title">About Astroweb</h2>
           <p className="section-desc">
             Sri Agathiya Mahasiva Nadi Jothida Nilayam • 4th Generation Hereditary Lineage at Vaitheeswaran Kovil
           </p>

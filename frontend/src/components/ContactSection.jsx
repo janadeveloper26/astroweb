@@ -110,8 +110,8 @@ export default function ContactSection({ t, lang }) {
                 <div className="info-text">
                   <h4>{t.contact.emailTitle}</h4>
                   <p>
-                    <a href="mailto:sivachandranadi@gmail.com" className="contact-link">
-                      sivachandranadi@gmail.com
+                    <a href="mailto:astrowebnadi@gmail.com" className="contact-link">
+                      astrowebnadi@gmail.com
                     </a>
                   </p>
                 </div>

@@ -72,12 +72,12 @@ export const translations = {
     testimonials: {
       badge: "Devotee Experiences",
       title: "Voices of Blessed Seekers",
-      subtitle: "Read authentic testimonials from individuals across Tamil Nadu, India, and across the globe whose lives were illuminated by Sivachandra Nadi.",
+      subtitle: "Read authentic testimonials from individuals across Tamil Nadu, India, and across the globe whose lives were illuminated by Astroweb.",
       leaveReviewBtn: "Share Your Experience",
     },
     contact: {
       badge: "Reach the Holy Sanctum",
-      title: "Contact Sivachandra Nadi Nilayam",
+      title: "Contact Astroweb Nadi Nilayam",
       subtitle: "Whether you wish to visit our Nilayam at Vaitheeswaran Koil or receive online consultation via video call, our Gurujis are here to assist.",
       addressTitle: "Sanctum Address",
       address: "2/72, Devasthanam Building, East Car Street, Vaitheeswaran Kovil, Sirkali Taluk, Mayiladuthurai District, Tamil Nadu, India - 609117",

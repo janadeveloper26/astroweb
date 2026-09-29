@@ -106,44 +106,41 @@ export default function Home({ onScrollTo }) {
           <div className="cards-grid-3">
             <div className="feature-card">
               <div className="card-icon-box">
-                <Users size={26} />
+                <Users size={22} />
               </div>
-              <h3>Current Generation (4th)</h3>
-              <p>
-                Carrying the torch forward. As the 4th generation of Nadi astrologers in our family,
-                we proudly continue the sacred legacy established by our ancestors at Vaitheeswaran Kovil.
-              </p>
-              <button onClick={() => onScrollTo('about')} className="card-learn-more">
-                Learn About Our History <ArrowRight size={14} />
-              </button>
+              <div className="feature-card-content">
+                <h3>Current Generation (4th)</h3>
+                <p>Continuing our family's sacred Nadi astrology legacy at Vaitheeswaran Kovil.</p>
+                <button onClick={() => onScrollTo('about')} className="card-learn-more">
+                  Learn More <ArrowRight size={13} />
+                </button>
+              </div>
             </div>
 
             <div className="feature-card">
               <div className="card-icon-box">
-                <Scroll size={26} />
+                <Scroll size={22} />
               </div>
-              <h3>Nadi Palm Leaf Science</h3>
-              <p>
-                Nadi is the sacred science of the thumbprint. By classifying unique whorls, our Gurujis
-                locate the exact ancient palm leaf written specifically for your life and soul.
-              </p>
-              <button onClick={() => onScrollTo('services')} className="card-learn-more">
-                View Services <ArrowRight size={14} />
-              </button>
+              <div className="feature-card-content">
+                <h3>Nadi Palm Leaf Science</h3>
+                <p>Locating your destined palm leaf through sacred thumbprint classification.</p>
+                <button onClick={() => onScrollTo('services')} className="card-learn-more">
+                  View Services <ArrowRight size={13} />
+                </button>
+              </div>
             </div>
 
             <div className="feature-card">
               <div className="card-icon-box">
-                <ShieldCheck size={26} />
+                <ShieldCheck size={22} />
               </div>
-              <h3>Vedic & Planetary Healing</h3>
-              <p>
-                Vaitheeswaran Koil is the supreme center for Lord Vaidyanathar and Mars (Angaraka)
-                pariharam. Cleanse past karmas and overcome obstacles through sacred remedial pujas.
-              </p>
-              <button onClick={() => onScrollTo('contact')} className="card-learn-more">
-                Enquire for Remedies <ArrowRight size={14} />
-              </button>
+              <div className="feature-card-content">
+                <h3>Vedic & Planetary Healing</h3>
+                <p>Authentic temple pariharams to overcome doshas and karmic obstacles.</p>
+                <button onClick={() => onScrollTo('contact')} className="card-learn-more">
+                  Enquire Now <ArrowRight size={13} />
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -168,7 +165,7 @@ export default function Home({ onScrollTo }) {
             </div>
 
             <div className="text-side">
-              <span className="section-tag">Welcome to Sivachandra Nadi</span>
+              <span className="section-tag">Welcome to Astroweb</span>
               <h2 className="section-title">
                 The Sacred Science of Thumbprint & Ancient Palm Leaves
               </h2>
@@ -215,34 +212,34 @@ export default function Home({ onScrollTo }) {
           <div className="steps-container-4">
             <div className="simple-step-card">
               <div className="step-circle">1</div>
-              <h4>Send Thumb Impression</h4>
-              <p>
-                Take a clear photo of your thumb impression on white paper (Right for Men, Left for Women) and send via WhatsApp or our contact form.
-              </p>
+              <div className="step-card-content">
+                <h4>Send Thumb Impression</h4>
+                <p>Send a photo of your thumbprint on white paper via WhatsApp.</p>
+              </div>
             </div>
 
             <div className="simple-step-card">
               <div className="step-circle">2</div>
-              <h4>Palm Leaf Bundle Search</h4>
-              <p>
-                Our hereditary astrologer searches the sacred palm leaf archives at Vaitheeswaran Kovil to find your matching bundle.
-              </p>
+              <div className="step-card-content">
+                <h4>Palm Leaf Search</h4>
+                <p>Guruji searches the sacred Vaitheeswaran Kovil archives for your bundle.</p>
+              </div>
             </div>
 
             <div className="simple-step-card">
               <div className="step-circle">3</div>
-              <h4>Fact Verification</h4>
-              <p>
-                During a live video call or phone session, Guruji verifies key verses with you (parents' names, career, siblings) to confirm your exact leaf.
-              </p>
+              <div className="step-card-content">
+                <h4>Fact Verification</h4>
+                <p>Live video or phone session to verify family verses and confirm your leaf.</p>
+              </div>
             </div>
 
             <div className="simple-step-card">
               <div className="step-circle">4</div>
-              <h4>Predictions & Recording</h4>
-              <p>
-                Your entire life predictions are translated, chanted, and explained in English/Tamil with remedial guidance and audio recording sent to you.
-              </p>
+              <div className="step-card-content">
+                <h4>Predictions & Audio</h4>
+                <p>Full life predictions chanted and explained with audio recording provided.</p>
+              </div>
             </div>
           </div>
         </div>

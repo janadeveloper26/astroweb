@@ -1,5 +1,5 @@
 import React from 'react';
-import { MessageCircle, Phone } from 'lucide-react';
+import { MessageCircle } from 'lucide-react';
 
 export default function FloatingWhatsApp() {
   const whatsappUrl =
@@ -8,23 +8,14 @@ export default function FloatingWhatsApp() {
   return (
     <div className="floating-widgets-light">
       <a
-        href="tel:+916374844127"
-        className="floating-call-btn"
-        title="Call Astrologer"
-        aria-label="Call Astrologer"
-      >
-        <Phone size={20} />
-      </a>
-
-      <a
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
         className="floating-wa-btn"
         title="Chat on WhatsApp"
-        aria-label="Chat on WhatsApp"
+        aria-label="Chat with Guruji on WhatsApp"
       >
-        <MessageCircle size={24} />
+        <MessageCircle size={26} />
         <span className="wa-pulse"></span>
       </a>
     </div>

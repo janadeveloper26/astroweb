@@ -29,7 +29,7 @@ const defaultReviews = [
     kandam: "10th Kandam (Profession & Business)",
     rating: 5,
     date: "2026-09-18",
-    comment: "I was facing heavy obstacles in my new clinic venture. The remedial pariharam prescribed from the palm leaves at Vaitheeswaran Koil transformed my situation within 90 days. Immensely grateful to Sivachandra Nadi.",
+    comment: "I was facing heavy obstacles in my new clinic venture. The remedial pariharam prescribed from the palm leaves at Vaitheeswaran Koil transformed my situation within 90 days. Immensely grateful to Astroweb.",
     verified: true,
   },
   {

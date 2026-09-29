@@ -30,7 +30,7 @@ export default function Navbar({ activeSection, onScrollTo }) {
             <span className="info-divider">|</span>
             <span className="info-item">
               <Mail size={13} className="info-icon" />
-              <a href="mailto:sivachandranadi@gmail.com">sivachandranadi@gmail.com</a>
+              <a href="mailto:astrowebnadi@gmail.com">astrowebnadi@gmail.com</a>
             </span>
             <span className="info-divider">|</span>
             <span className="info-item location-item">
@@ -55,7 +55,7 @@ export default function Navbar({ activeSection, onScrollTo }) {
               <span>ॐ</span>
             </div>
             <div className="logo-text">
-              <span className="brand-name">Sivachandra Nadi</span>
+              <span className="brand-name">Astroweb</span>
               <span className="brand-tagline">Sri Agathiya Mahasiva Nadi Jothida Nilayam</span>
             </div>
           </div>

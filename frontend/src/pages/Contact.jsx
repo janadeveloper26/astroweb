@@ -41,9 +41,9 @@ export default function Contact({ preselectedService }) {
 
       // Save locally
       try {
-        const existing = JSON.parse(localStorage.getItem('sivachandra_inquiries') || '[]');
+        const existing = JSON.parse(localStorage.getItem('astroweb_inquiries') || '[]');
         existing.push(payload);
-        localStorage.setItem('sivachandra_inquiries', JSON.stringify(existing));
+        localStorage.setItem('astroweb_inquiries', JSON.stringify(existing));
       } catch (e) {
         // ignore
       }
@@ -60,7 +60,7 @@ export default function Contact({ preselectedService }) {
       }
 
       // Format WhatsApp message to directly notify Guruji
-      const text = `*New Consultation Enquiry - Sivachandra Nadi*%0A%0A*Name:* ${encodeURIComponent(
+      const text = `*New Consultation Enquiry - Astroweb*%0A%0A*Name:* ${encodeURIComponent(
         name
       )}%0A*Phone:* ${encodeURIComponent(phone)}%0A*Email:* ${encodeURIComponent(
         email || 'Not provided'
@@ -91,7 +91,7 @@ export default function Contact({ preselectedService }) {
           <span className="section-tag">Reach Out</span>
           <h2 className="section-title">Contact Us</h2>
           <p className="section-desc">
-            Get in touch with Sri Agathiya Mahasiva Nadi Jothida Nilayam at Vaitheeswaran Kovil
+            Get in touch with Astroweb (Sri Agathiya Mahasiva Nadi Jothida Nilayam) at Vaitheeswaran Kovil
           </p>
         </div>
 
@@ -112,7 +112,7 @@ export default function Contact({ preselectedService }) {
                 <div>
                   <strong>Sanctum Address</strong>
                   <p>
-                    2/72, Devasthanam Building, East Car Street, Vaitheeswaran Kovil, Sirkali Taluk, Mayiladuthurai District, Tamil Nadu, India - 609117
+                    2/72, Devasthanam Bldg, East Car St, Vaitheeswaran Kovil - 609117, Tamil Nadu
                   </p>
                 </div>
               </div>
@@ -124,10 +124,7 @@ export default function Contact({ preselectedService }) {
                 <div>
                   <strong>Phone Numbers</strong>
                   <p>
-                    <a href="tel:+916374844127" className="link-text">+91 6374844127</a>
-                  </p>
-                  <p>
-                    <a href="tel:+918189911639" className="link-text">+91 8189911639</a>
+                    <a href="tel:+916374844127" className="link-text">+91 6374844127</a> / <a href="tel:+918189911639" className="link-text">+91 8189911639</a>
                   </p>
                 </div>
               </div>
@@ -145,7 +142,7 @@ export default function Contact({ preselectedService }) {
                       rel="noopener noreferrer"
                       className="whatsapp-text-link"
                     >
-                      +91 6374844127 (Click to Chat Directly)
+                      +91 6374844127 (Chat on WhatsApp)
                     </a>
                   </p>
                 </div>
@@ -158,8 +155,8 @@ export default function Contact({ preselectedService }) {
                 <div>
                   <strong>Email Address</strong>
                   <p>
-                    <a href="mailto:sivachandranadi@gmail.com" className="link-text">
-                      sivachandranadi@gmail.com
+                    <a href="mailto:astrowebnadi@gmail.com" className="link-text">
+                      astrowebnadi@gmail.com
                     </a>
                   </p>
                 </div>
@@ -233,59 +230,61 @@ export default function Contact({ preselectedService }) {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="clean-booking-form">
-                  <div className="form-field">
-                    <label>Your Name *</label>
-                    <input
-                      type="text"
-                      required
-                      placeholder="Enter your name"
-                      value={name}
-                      onChange={(e) => setName(e.target.value)}
-                      className="input-box"
-                    />
-                  </div>
-
                   <div className="form-row-2">
+                    <div className="form-field">
+                      <label>Your Name *</label>
+                      <input
+                        type="text"
+                        required
+                        placeholder="Your name"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                        className="input-box"
+                      />
+                    </div>
+
                     <div className="form-field">
                       <label>Phone Number *</label>
                       <input
                         type="tel"
                         required
-                        placeholder="Enter your phone number"
+                        placeholder="Phone number"
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
                         className="input-box"
                       />
                     </div>
+                  </div>
 
+                  <div className="form-row-2">
                     <div className="form-field">
                       <label>Email Address</label>
                       <input
                         type="email"
-                        placeholder="Enter your email"
+                        placeholder="Email (optional)"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         className="input-box"
                       />
                     </div>
-                  </div>
 
-                  <div className="form-field">
-                    <label>Subject</label>
-                    <input
-                      type="text"
-                      placeholder="Enter subject"
-                      value={subject}
-                      onChange={(e) => setSubject(e.target.value)}
-                      className="input-box"
-                    />
+                    <div className="form-field">
+                      <label>Subject</label>
+                      <input
+                        type="text"
+                        placeholder="Subject"
+                        value={subject}
+                        onChange={(e) => setSubject(e.target.value)}
+                        className="input-box"
+                      />
+                    </div>
                   </div>
 
                   <div className="form-field">
                     <label>Message *</label>
                     <textarea
                       required
-                      rows={5}
+                      rows={3}
                       placeholder="Write your message or inquiry here..."
                       value={message}
                       onChange={(e) => setMessage(e.target.value)}
@@ -298,8 +297,8 @@ export default function Contact({ preselectedService }) {
                     disabled={submitting}
                     className="btn-primary w-100"
                   >
-                    <Send size={16} />
-                    <span>{submitting ? 'Sending Message...' : 'Send Message'}</span>
+                    <Send size={15} />
+                    <span>{submitting ? 'Sending...' : 'Send Message'}</span>
                   </button>
                 </form>
               )}
