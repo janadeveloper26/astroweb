@@ -36,28 +36,48 @@ export default function Contact({ preselectedService }) {
         email,
         subject,
         message,
+        timestamp: new Date().toISOString(),
       };
 
-      const res = await fetch('http://localhost:5000/api/inquiries', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
-      });
-
-      const data = await res.json();
-      if (data.success) {
-        setSubmitted(true);
-        confetti({
-          particleCount: 80,
-          spread: 60,
-          origin: { y: 0.6 },
-        });
-      } else {
-        setSubmitted(true);
+      // Save locally
+      try {
+        const existing = JSON.parse(localStorage.getItem('sivachandra_inquiries') || '[]');
+        existing.push(payload);
+        localStorage.setItem('sivachandra_inquiries', JSON.stringify(existing));
+      } catch (e) {
+        // ignore
       }
-    } catch (err) {
-      // Local fallback
+
+      // Try backend if available (optional, won't break if offline)
+      try {
+        await fetch('http://localhost:5000/api/inquiries', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+      } catch (err) {
+        // Backend not running, proceed gracefully
+      }
+
+      // Format WhatsApp message to directly notify Guruji
+      const text = `*New Consultation Enquiry - Sivachandra Nadi*%0A%0A*Name:* ${encodeURIComponent(
+        name
+      )}%0A*Phone:* ${encodeURIComponent(phone)}%0A*Email:* ${encodeURIComponent(
+        email || 'Not provided'
+      )}%0A*Subject:* ${encodeURIComponent(subject)}%0A*Message:* ${encodeURIComponent(
+        message
+      )}`;
+      const waUrl = `https://wa.me/916374844127?text=${text}`;
+
+      // Open WhatsApp in new tab for direct consultation
+      window.open(waUrl, '_blank');
+
       setSubmitted(true);
+      confetti({
+        particleCount: 80,
+        spread: 60,
+        origin: { y: 0.6 },
+      });
     } finally {
       setSubmitting(false);
     }
@@ -183,20 +203,33 @@ export default function Contact({ preselectedService }) {
                   <CheckCircle size={52} className="check-success" />
                   <h4>Thank You!</h4>
                   <p>
-                    Your message has been sent successfully. We will get back to you shortly.
+                    Your enquiry has been received and opened on WhatsApp. Guruji's team will contact you promptly.
                   </p>
-                  <button
-                    onClick={() => {
-                      setSubmitted(false);
-                      setName('');
-                      setPhone('');
-                      setEmail('');
-                      setMessage('');
-                    }}
-                    className="btn-primary mt-3"
-                  >
-                    Send Another Message
-                  </button>
+                  <div style={{ display: 'flex', gap: '0.75rem', justifyContent: 'center', marginTop: '1.25rem', flexWrap: 'wrap' }}>
+                    <a
+                      href="https://wa.me/916374844127"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-whatsapp"
+                      style={{ padding: '0.65rem 1.25rem' }}
+                    >
+                      <MessageCircle size={16} />
+                      <span>Chat on WhatsApp</span>
+                    </a>
+                    <button
+                      onClick={() => {
+                        setSubmitted(false);
+                        setName('');
+                        setPhone('');
+                        setEmail('');
+                        setMessage('');
+                      }}
+                      className="btn-secondary"
+                      style={{ padding: '0.65rem 1.25rem' }}
+                    >
+                      Send Another Message
+                    </button>
+                  </div>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="clean-booking-form">
