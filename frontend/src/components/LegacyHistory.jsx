@@ -57,7 +57,7 @@ export default function LegacyHistory({ t, lang, onOpenBooking }) {
                 </div>
                 <div className="heritage-badge-pill">
                   <History size={15} />
-                  <span>{lang === 'ta' ? '4-ம் தலைமுறை பாரம்பரியம்' : '4th Generation Lineage'}</span>
+                  <span>{lang === 'ta' ? '3-ம் தலைமுறை பாரம்பரியம்' : '3rd Generation Lineage'}</span>
                 </div>
               </div>
 

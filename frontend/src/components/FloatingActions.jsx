@@ -3,7 +3,7 @@ import { Phone, MessageCircle, Calendar } from 'lucide-react';
 import SacredAudio from './SacredAudio';
 
 export default function FloatingActions({ lang, onOpenBooking }) {
-  const whatsappUrl = `https://wa.me/916374844127?text=${encodeURIComponent(
+  const whatsappUrl = `https://wa.me/918838972528?text=${encodeURIComponent(
     lang === 'ta'
       ? 'வணக்கம் குருஜி, நான் வைத்தீஸ்வரன் கோவில் அகத்திய மகாசிவ நாடி ஜோதிடம் பார்க்க விரும்புகிறேன்.'
       : 'Pranam Guruji, I would like to consult Sri Agathiya Mahasiva Nadi Palm Leaf reading.'
@@ -18,9 +18,9 @@ export default function FloatingActions({ lang, onOpenBooking }) {
       <div className="floating-actions-container">
         {/* Call button */}
         <a
-          href="tel:+916374844127"
+          href="tel:+918838972528"
           className="floating-btn call-float-btn"
-          title={lang === 'ta' ? 'குருஜியை அழைக்க' : 'Call Guruji (+91 6374844127)'}
+          title={lang === 'ta' ? 'குருஜியை அழைக்க' : 'Call Guruji (+91 883 897 2528)'}
           aria-label="Call Guruji"
         >
           <Phone size={22} />

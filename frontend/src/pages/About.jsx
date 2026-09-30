@@ -10,7 +10,7 @@ export default function About({ onScrollTo }) {
           <span className="section-tag">About Our Lineage</span>
           <h2 className="section-title">About Astroweb</h2>
           <p className="section-desc">
-            Sri Agathiya Mahasiva Nadi Jothida Nilayam • 4th Generation Hereditary Lineage at Vaitheeswaran Kovil
+            Sri Agathiya Mahasiva Nadi Jothida Nilayam • 3rd Generation Hereditary Lineage at Vaitheeswaran Kovil
           </p>
         </div>
 

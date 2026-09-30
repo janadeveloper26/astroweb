@@ -20,7 +20,7 @@ export default function Footer({ onScrollTo }) {
           </p>
           <div className="footer-timing-badge">
             <Clock size={14} />
-            <span>Mon - Sun: 8:00 AM – 9:00 PM</span>
+            <span>Open 24 Hours (24h)</span>
           </div>
         </div>
 
@@ -52,11 +52,11 @@ export default function Footer({ onScrollTo }) {
           <div className="footer-contact-list">
             <p className="contact-detail">
               <MapPin size={16} className="detail-icon" />
-              <span>2/72, Devasthanam Bldg, East Car St, Vaitheeswaran Kovil - 609117, Tamil Nadu</span>
+              <span>Guruji V.prakash Shivam, 2/75, Edakudi thenpathi, Vaitheeshwarankovil</span>
             </p>
             <p className="contact-detail">
               <Phone size={16} className="detail-icon" />
-              <a href="tel:+916374844127">+91 6374844127</a> / <a href="tel:+918189911639">+91 8189911639</a>
+              <a href="tel:+918838972528">+91 883 897 2528</a>
             </p>
             <p className="contact-detail">
               <Mail size={16} className="detail-icon" />

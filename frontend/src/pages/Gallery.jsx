@@ -1,34 +1,52 @@
 import React, { useState } from 'react';
 import { Eye, X } from 'lucide-react';
 
+import divineGuruImg from '../assets/WhatsApp Image 2026-09-30 at 12.14.13 PM.jpeg';
+import palmLeafImg from '../assets/WhatsApp Image 2026-09-30 at 5.40.01 PM.jpeg';
+import thumbprintImg from '../assets/WhatsApp Image 2026-09-30 at 5.51.44 PM.jpeg';
+
 const galleryItems = [
   {
     id: 1,
+    title: "Divine Guru & Lineage Spiritual Master",
+    category: "Divine Guru",
+    src: divineGuruImg,
+    desc: "Revered spiritual master and custodian of ancient Agathiya Nadi wisdom, seated in the holy sanctum with sacred rudraksha and blessings.",
+  },
+  {
+    id: 2,
+    title: "Authentic Sacred Palm Leaf Bundle (Olai Chuvadi)",
+    category: "Palm Leaf Scriptures",
+    src: palmLeafImg,
+    desc: "Original Palmyra palm leaves inscribed with ancient Tamil poetic verses detailing past, present, and future destinies.",
+  },
+  {
+    id: 3,
+    title: "Sacred Thumb Impression for Leaf Identification",
+    category: "Biometric Search",
+    src: thumbprintImg,
+    desc: "Authentic thumb impression (Chakra) utilized to identify the matching destined palm leaf bundle out of sacred archives.",
+  },
+  {
+    id: 4,
     title: "Vaitheeswaran Koil Sacred Temple Tower & Tank",
     category: "Holy Temple",
     src: "/images/temple.jpg",
     desc: "The sacred gopuram and Siddhamirtham holy temple water tank at twilight, Vaitheeswaran Koil.",
   },
   {
-    id: 2,
+    id: 5,
+    title: "Sacred Sanctum & Hereditary Gurukkal Chanting",
+    category: "Sanctum Reading",
+    src: "/images/hero.jpg",
+    desc: "3rd generation hereditary Nadi astrologer deciphering destined palm leaves in the presence of Sage Agathiyar and Lord Shiva.",
+  },
+  {
+    id: 6,
     title: "Antique Nadi Palm Leaf Manuscript (Olai Chuvadi)",
     category: "Palm Leaf Scriptures",
     src: "/images/palm-leaves.jpg",
     desc: "Ancient Palmyra palm leaves inscribed with poetic Tamil verses and traditional bronze writing stylus (ezhuthani).",
-  },
-  {
-    id: 3,
-    title: "Sacred Sanctum & Hereditary Gurukkal Chanting",
-    category: "Sanctum Reading",
-    src: "/images/hero.jpg",
-    desc: "4th generation hereditary Nadi astrologer deciphering destined palm leaves in the presence of Sage Agathiyar and Lord Shiva.",
-  },
-  {
-    id: 4,
-    title: "Sacred Thumbprint Biometric Science",
-    category: "Thumbprint Science",
-    src: "/images/thumbprint.jpg",
-    desc: "Astrological classification of human thumb impressions into 108 categories as divined by Sage Agathiyar.",
   },
 ];
 

@@ -799,6 +799,215 @@ h1, h2, h3, h4, h5 {
   line-height: 1.6;
 }
 
+/* Why Choose Us Section */
+.why-choose-section {
+  background: linear-gradient(180deg, #ffffff 0%, #fffbf5 50%, #ffffff 100%);
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.why-choose-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+  margin-top: 2.75rem;
+}
+
+.why-card {
+  background: #ffffff;
+  border: 1px solid #f3ede2;
+  border-radius: 16px;
+  padding: 1.85rem 1.6rem;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.why-card:hover {
+  transform: translateY(-5px);
+  border-color: #fed7aa;
+  box-shadow: 0 14px 30px rgba(234, 88, 12, 0.09);
+}
+
+.why-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.why-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  color: var(--saffron-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.why-card:hover .why-icon-box {
+  background: var(--saffron-primary);
+  color: #ffffff;
+  transform: scale(1.06);
+}
+
+.why-icon-box.highlight-icon {
+  background: linear-gradient(135deg, #fff7ed 0%, #fed7aa 100%);
+  color: #c2410c;
+  border-color: #f97316;
+}
+
+.why-step-num {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #cbd5e1;
+  letter-spacing: 0.05em;
+}
+
+.why-card-title {
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 0.65rem;
+  line-height: 1.35;
+}
+
+.why-card-desc {
+  font-size: 0.92rem;
+  color: var(--text-body);
+  line-height: 1.65;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.why-card-tag {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: #9a3412;
+  background: #fff7ed;
+  border: 1px solid #ffedd5;
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.why-card-tag.tag-sacred {
+  background: #fef2f2;
+  border-color: #fecaca;
+  color: #dc2626;
+}
+
+/* 7th Feature: Worldwide Grand Banner Card */
+.why-card-worldwide {
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 45%, #fef3c7 100%);
+  border: 1.5px solid #fdba74;
+  border-radius: 18px;
+  padding: 2.25rem 2.5rem;
+  box-shadow: 0 10px 30px rgba(234, 88, 12, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  position: relative;
+  overflow: hidden;
+}
+
+.why-card-worldwide::before {
+  content: "ॐ";
+  position: absolute;
+  right: 15px;
+  bottom: -20px;
+  font-size: 8.5rem;
+  font-weight: 900;
+  color: rgba(234, 88, 12, 0.05);
+  pointer-events: none;
+}
+
+.worldwide-content {
+  flex: 1 1 520px;
+}
+
+.worldwide-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: #ffffff;
+  border: 1px solid #fed7aa;
+  color: #c2410c;
+  font-size: 0.8rem;
+  font-weight: 800;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  margin-bottom: 0.85rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.worldwide-title {
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: #7c2d12;
+  margin-bottom: 0.65rem;
+  line-height: 1.3;
+}
+
+.worldwide-desc {
+  font-size: 0.98rem;
+  color: #431407;
+  line-height: 1.7;
+}
+
+.worldwide-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 960px) {
+  .why-choose-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+  .why-card-worldwide {
+    padding: 1.75rem 1.5rem;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .why-choose-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .why-card {
+    padding: 1.4rem 1.2rem;
+  }
+  .worldwide-title {
+    font-size: 1.35rem;
+  }
+  .worldwide-actions {
+    width: 100%;
+  }
+  .worldwide-actions button,
+  .worldwide-actions a {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 /* CTA Banner Light */
 .cta-banner-light {
   background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
@@ -1158,6 +1367,170 @@ h1, h2, h3, h4, h5 {
     text-align: center;
   }
 }
+/* ==========================================================================
+   Types of Nadi Section
+   ========================================================================== */
+
+.nadi-types-wrapper {
+  margin-top: 4.5rem;
+  padding-top: 3.5rem;
+  border-top: 1px solid var(--border-medium);
+}
+
+.nadi-types-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2.75rem;
+}
+
+.nadi-card {
+  background: #ffffff;
+  border: 1px solid #f3ede2;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.nadi-card:hover {
+  transform: translateY(-6px);
+  border-color: #fed7aa;
+  box-shadow: 0 16px 36px rgba(234, 88, 12, 0.12);
+}
+
+.nadi-card-img-wrap {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+  background: #1e1b18;
+}
+
+.nadi-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  transition: transform 0.6s ease;
+}
+
+.nadi-card:hover .nadi-card-img {
+  transform: scale(1.06);
+}
+
+.nadi-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.65) 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: 1.15rem;
+}
+
+.nadi-rishi-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(254, 215, 170, 0.45);
+  color: #fed7aa;
+  font-size: 0.74rem;
+  font-weight: 700;
+  padding: 0.3rem 0.75rem;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.nadi-card-body {
+  padding: 1.5rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.nadi-title-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 0.35rem;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.nadi-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+.nadi-tamil-name {
+  font-size: 0.88rem;
+  color: var(--saffron-primary);
+  font-weight: 700;
+}
+
+.nadi-location-text {
+  font-size: 0.82rem;
+  color: #9a3412;
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  display: inline-block;
+  padding: 0.3rem 0.75rem;
+  border-radius: 8px;
+  margin-bottom: 1.25rem;
+  font-weight: 700;
+  width: fit-content;
+}
+
+.nadi-consult-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: #ffffff;
+  border: 1.5px solid #fed7aa;
+  color: var(--saffron-primary);
+  border-radius: 10px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.nadi-consult-btn:hover {
+  background: var(--saffron-gradient);
+  border-color: var(--saffron-primary);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(234, 88, 12, 0.25);
+}
+
+@media (max-width: 992px) {
+  .nadi-types-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .nadi-types-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .nadi-card-img-wrap {
+    height: 220px;
+  }
+}
 
 /* ==========================================================================
    Gallery Page
@@ -1165,8 +1538,15 @@ h1, h2, h3, h4, h5 {
 
 .gallery-grid-clean {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+@media (max-width: 960px) {
+  .gallery-grid-clean {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
 }
 
 .gallery-item-card {
@@ -1283,8 +1663,10 @@ h1, h2, h3, h4, h5 {
 
 .lightbox-full-img {
   width: 100%;
-  max-height: 480px;
-  object-fit: cover;
+  max-height: 540px;
+  object-fit: contain;
+  background: #0f131d;
+  display: block;
 }
 
 .lightbox-details {

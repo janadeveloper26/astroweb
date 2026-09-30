@@ -173,7 +173,7 @@ export default function BookingModal({ isOpen, onClose, lang, t, preselectedKand
       lang === 'ta'
         ? `வணக்கம் குருஜி, நான் நாடி ஜோதிட ஆலோசனைக்கு பதிவு செய்துள்ளேன்.\n\n*பதிவு எண்:* ${bookingSuccess.id}\n*பெயர்:* ${name}\n*தொலைபேசி:* ${phone}\n*பாலினம்:* ${gender === 'female' ? 'பெண் (இடது பெருவிரல்)' : 'ஆண் (வலது பெருவிரல்)'}\n*தேர்ந்தெடுத்த காண்டங்கள்:* ${selectedKandams.join(', ')}\n*தேதி & நேரம்:* ${date} (${timeSlot})\n*முறை:* ${mode}\n\nசுவடி தேடும் பணியை துவங்க வேண்டுகிறேன்.`
         : `Pranam Guruji, I have registered for Nadi Palm Leaf consultation.\n\n*Booking ID:* ${bookingSuccess.id}\n*Name:* ${name}\n*Phone:* ${phone}\n*Gender:* ${gender === 'female' ? 'Female (Left Thumb)' : 'Male (Right Thumb)'}\n*Kandams:* ${selectedKandams.join(', ')}\n*Date & Slot:* ${date} (${timeSlot})\n*Mode:* ${mode}\n\nPlease begin the palm leaf search at Vaitheeswaran Koil archives.`;
-    return `https://wa.me/916374844127?text=${encodeURIComponent(text)}`;
+    return `https://wa.me/918838972528?text=${encodeURIComponent(text)}`;
   };
 
   return (

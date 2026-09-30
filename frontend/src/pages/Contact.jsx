@@ -67,7 +67,7 @@ export default function Contact({ preselectedService }) {
       )}%0A*Subject:* ${encodeURIComponent(subject)}%0A*Message:* ${encodeURIComponent(
         message
       )}`;
-      const waUrl = `https://wa.me/916374844127?text=${text}`;
+      const waUrl = `https://wa.me/918838972528?text=${text}`;
 
       // Open WhatsApp in new tab for direct consultation
       window.open(waUrl, '_blank');
@@ -112,7 +112,9 @@ export default function Contact({ preselectedService }) {
                 <div>
                   <strong>Sanctum Address</strong>
                   <p>
-                    2/72, Devasthanam Bldg, East Car St, Vaitheeswaran Kovil - 609117, Tamil Nadu
+                    Guruji V.prakash Shivam<br />
+                    2/75, Edakudi thenpathi,<br />
+                    Vaitheeshwarankovil
                   </p>
                 </div>
               </div>
@@ -122,9 +124,9 @@ export default function Contact({ preselectedService }) {
                   <Phone size={20} />
                 </div>
                 <div>
-                  <strong>Phone Numbers</strong>
+                  <strong>Phone Number</strong>
                   <p>
-                    <a href="tel:+916374844127" className="link-text">+91 6374844127</a> / <a href="tel:+918189911639" className="link-text">+91 8189911639</a>
+                    <a href="tel:+918838972528" className="link-text">+91 883 897 2528</a>
                   </p>
                 </div>
               </div>
@@ -137,12 +139,12 @@ export default function Contact({ preselectedService }) {
                   <strong>WhatsApp Consultation</strong>
                   <p>
                     <a
-                      href="https://wa.me/916374844127"
+                      href="https://wa.me/918838972528"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="whatsapp-text-link"
                     >
-                      +91 6374844127 (Chat on WhatsApp)
+                      +91 883 897 2528 (Chat on WhatsApp)
                     </a>
                   </p>
                 </div>
@@ -168,7 +170,7 @@ export default function Contact({ preselectedService }) {
                 </div>
                 <div>
                   <strong>Opening Hours</strong>
-                  <p>Monday to Sunday : 8:00 AM – 9:00 PM (IST)</p>
+                  <p>Open 24 Hours (24h) – All 7 Days</p>
                 </div>
               </div>
             </div>
@@ -176,8 +178,8 @@ export default function Contact({ preselectedService }) {
             {/* Map */}
             <div className="clean-map-container">
               <iframe
-                title="Vaitheeswaran Koil Devasthanam Building Map"
-                src="https://maps.google.com/maps?q=2%2F72%2C%20DEVASTHANAM%20BUILDING%2CEAST%20CAR%20STREET%20VAITHISWARAN%20KOVIL%2C%20SIRKALI%20TALUKA%20MAYILADUTHURAI%20DISTRICT%20TAMILNADU%2C%20INDIA%20-%20609117&t=m&z=15&output=embed&iwloc=near"
+                title="Vaitheeshwarankovil Map - Guruji V.prakash Shivam"
+                src="https://maps.google.com/maps?q=2%2F75%2C%20Edakudi%20thenpathi%2C%20Vaitheeshwarankovil&t=m&z=15&output=embed&iwloc=near"
                 width="100%"
                 height="250"
                 style={{ border: 0 }}
@@ -204,7 +206,7 @@ export default function Contact({ preselectedService }) {
                   </p>
                   <div style={{ display: 'flex', gap: '0.75rem', justifyContent: 'center', marginTop: '1.25rem', flexWrap: 'wrap' }}>
                     <a
-                      href="https://wa.me/916374844127"
+                      href="https://wa.me/918838972528"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="btn-whatsapp"

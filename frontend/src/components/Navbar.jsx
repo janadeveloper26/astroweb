@@ -25,7 +25,7 @@ export default function Navbar({ activeSection, onScrollTo }) {
           <div className="top-left-info">
             <span className="info-item">
               <Phone size={13} className="info-icon" />
-              <a href="tel:+916374844127">+91 6374844127</a> / <a href="tel:+918189911639">+91 8189911639</a>
+              <a href="tel:+918838972528">+91 883 897 2528</a>
             </span>
             <span className="info-divider">|</span>
             <span className="info-item">
@@ -41,7 +41,7 @@ export default function Navbar({ activeSection, onScrollTo }) {
 
           <div className="top-right-info">
             <Clock size={13} className="info-icon" />
-            <span>Mon to Sun : 8:00 AM – 9:00 PM</span>
+            <span>Open 24 Hours (24h)</span>
           </div>
         </div>
       </div>

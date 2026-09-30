@@ -2,7 +2,7 @@ import React from 'react';
 import { Sparkles, Calendar, MessageCircle, ArrowRight, ShieldCheck, CheckCircle2 } from 'lucide-react';
 
 export default function Hero({ t, lang, onOpenBooking }) {
-  const whatsappUrl = `https://wa.me/916374844127?text=${encodeURIComponent(
+  const whatsappUrl = `https://wa.me/918838972528?text=${encodeURIComponent(
     lang === 'ta'
       ? 'வணக்கம் குருஜி, நான் ஸ்ரீ அகத்திய மகாசிவ நாடி ஜோதிடம் ஆன்லைன் மூலம் பார்க்க விரும்புகிறேன். தயவுசெய்து வழிகாட்டவும்.'
       : 'Pranam Guruji, I would like to book an authentic Nadi Palm Leaf reading consultation. Please guide me.'
