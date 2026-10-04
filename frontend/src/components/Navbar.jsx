@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Clock, Menu, X } from 'lucide-react';
+import logoImg from '../assets/logo.png';
 
 export default function Navbar({ activeSection, onScrollTo }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -8,7 +9,7 @@ export default function Navbar({ activeSection, onScrollTo }) {
     { id: 'home', label: 'Home' },
     { id: 'about', label: 'About Us' },
     { id: 'services', label: 'Services' },
-    { id: 'gallery', label: 'Gallery' },
+    { id: 'nadi-types', label: 'Types of Nadi' },
     { id: 'contact', label: 'Contact' },
   ];
 
@@ -52,11 +53,11 @@ export default function Navbar({ activeSection, onScrollTo }) {
           {/* Logo */}
           <div onClick={() => handleNavClick('home')} className="logo-wrap cursor-pointer">
             <div className="logo-emblem">
-              <span>ॐ</span>
+              <img src={logoImg} alt="Agathiyar Nadi Logo" className="logo-img" />
             </div>
             <div className="logo-text">
               <span className="brand-name">Astroweb</span>
-              <span className="brand-tagline">Sri Agathiya Mahasiva Nadi Jothida Nilayam</span>
+              <span className="brand-tagline">Sri Agasthiyar Maharishi Nadi Jothidam Nilayam</span>
             </div>
           </div>
 

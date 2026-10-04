@@ -5,20 +5,12 @@ import {
   Heart,
   Activity,
   Flame,
-  Video,
+  Globe,
   ArrowRight,
   ChevronDown,
   ChevronUp,
-  Sparkles,
   BookOpen,
 } from 'lucide-react';
-
-import vasistaImg from '../assets/nadi/vasista-nadi.jpg';
-import bhriguImg from '../assets/nadi/bhrigu-nadi.jpg';
-import brahmaImg from '../assets/nadi/brahma-nadi.jpg';
-import kaushikaImg from '../assets/nadi/kaushika-nadi.jpg';
-import agasthiyaImg from '../assets/nadi/agasthiya-nadi.jpg';
-import sukhaImg from '../assets/nadi/sukha-nadi.jpg';
 
 const mainServices = [
   {
@@ -59,60 +51,9 @@ const mainServices = [
   {
     id: 'online',
     tag: 'Worldwide',
-    title: 'Online Video Consultation',
-    desc: 'Direct consultation via WhatsApp video call with audio recording.',
-    icon: Video,
-  },
-];
-
-const nadiTypes = [
-  {
-    id: 'vasista',
-    name: 'Vasista Nadi',
-    tamilName: 'வசிஷ்ட நாடி',
-    location: 'Wrist Pulse • மணிக்கட்டு நாடி',
-    tag: 'Pulse Reading',
-    img: vasistaImg,
-  },
-  {
-    id: 'bhrigu',
-    name: 'Bhrigu Nadi',
-    tamilName: 'பிருகு நாடி',
-    location: 'Palm Lines • உள்ளங்கை ரேகைகள்',
-    tag: 'Destiny Lines',
-    img: bhriguImg,
-  },
-  {
-    id: 'brahma',
-    name: 'Brahma Nadi',
-    tamilName: 'பிரம்மா நாடி',
-    location: 'Thumbprint Whorl • பெருவிரல் சக்கரம்',
-    tag: 'Thumb Chakra',
-    img: brahmaImg,
-  },
-  {
-    id: 'kaushika',
-    name: 'Kaushika Nadi',
-    tamilName: 'கௌசிக நாடி',
-    location: 'Hand Mounts • கையின் மேடுகள்',
-    tag: 'Planetary Mounts',
-    img: kaushikaImg,
-  },
-  {
-    id: 'agasthiya',
-    name: 'Agasthiya Nadi',
-    tamilName: 'அகத்தியர் நாடி',
-    location: 'Palm Leaf Verse • மூல ஓலைச்சுவடி',
-    tag: 'Ancient Script',
-    img: agasthiyaImg,
-  },
-  {
-    id: 'sukha',
-    name: 'Sukha Nadi',
-    tamilName: 'சுகர் நாடி',
-    location: 'Chin Mudra • சின்முத்திரை நாடி',
-    tag: 'Sacred Mudra',
-    img: sukhaImg,
+    title: 'Online Consultation',
+    desc: 'Direct consultation via WhatsApp online call with audio recording.',
+    icon: Globe,
   },
 ];
 
@@ -185,53 +126,7 @@ export default function Services({ onScrollTo, onSelectService }) {
           })}
         </div>
 
-        {/* Types of Nadi Showcase */}
-        <div className="nadi-types-wrapper">
-          <div className="section-header-center">
-            <span className="section-tag">Sacred Traditions & Palm Leaves</span>
-            <h2 className="section-title">Types of Nadi Astrology</h2>
-            <p className="section-desc">
-              Ancient palm leaf scriptures divined by illuminated Rishis & Siddhas, each revealing profound insights into human destiny.
-            </p>
-          </div>
 
-          <div className="nadi-types-grid">
-            {nadiTypes.map((nadi) => (
-              <div key={nadi.id} className="nadi-card">
-                <div className="nadi-card-img-wrap">
-                  <img
-                    src={nadi.img}
-                    alt={`${nadi.name} - ${nadi.location}`}
-                    className="nadi-card-img"
-                  />
-                  <div className="nadi-card-overlay">
-                    <span className="nadi-rishi-badge">
-                      <Sparkles size={12} />
-                      {nadi.tag}
-                    </span>
-                  </div>
-                </div>
-
-                <div className="nadi-card-body">
-                  <div className="nadi-title-row">
-                    <h3 className="nadi-title">{nadi.name}</h3>
-                    <span className="nadi-tamil-name">{nadi.tamilName}</span>
-                  </div>
-                  <span className="nadi-location-text">{nadi.location}</span>
-
-                  <button
-                    type="button"
-                    onClick={() => handleBook(`${nadi.name} Consultation`)}
-                    className="nadi-consult-btn"
-                  >
-                    <span>Consult Now</span>
-                    <ArrowRight size={14} />
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
 
         {/* Clean Accordion / Expandable for the 15 Kandams (Simple & unobtrusive) */}
         <div className="kandams-expand-container">

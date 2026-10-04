@@ -1,5 +1,6 @@
 import React from 'react';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+import logoImg from '../assets/logo.png';
 
 export default function Footer({ onScrollTo }) {
   return (
@@ -8,10 +9,12 @@ export default function Footer({ onScrollTo }) {
         {/* Col 1: About */}
         <div className="footer-col">
           <div className="footer-brand-title">
-            <span className="footer-emblem">ॐ</span>
+            <div className="footer-emblem">
+              <img src={logoImg} alt="Agathiyar Nadi Logo" className="logo-img" />
+            </div>
             <div>
               <h3>Astroweb</h3>
-              <p>Sri Agathiya Mahasiva Nadi Jothida Nilayam</p>
+              <p>Sri Agasthiyar Maharishi Nadi Jothidam Nilayam</p>
             </div>
           </div>
           <p className="footer-about-text">
@@ -38,7 +41,7 @@ export default function Footer({ onScrollTo }) {
               <button onClick={() => onScrollTo('services')} className="footer-link-btn">Services</button>
             </li>
             <li>
-              <button onClick={() => onScrollTo('gallery')} className="footer-link-btn">Photo Gallery</button>
+              <button onClick={() => onScrollTo('nadi-types')} className="footer-link-btn">Types of Nadi</button>
             </li>
             <li>
               <button onClick={() => onScrollTo('contact')} className="footer-link-btn">Contact Us</button>
@@ -68,7 +71,7 @@ export default function Footer({ onScrollTo }) {
 
       <div className="footer-bottom-strip">
         <div className="container bottom-inner">
-          <p>© {new Date().getFullYear()} Astroweb (Sri Agathiya Mahasiva Nadi Jothida Nilayam). All Rights Reserved.</p>
+          <p>© {new Date().getFullYear()} Astroweb (Sri Agasthiyar Maharishi Nadi Jothidam Nilayam). All Rights Reserved.</p>
           <p className="sanctum-location-note">Vaitheeswaran Kovil, Tamil Nadu, India</p>
         </div>
       </div>

@@ -5,7 +5,7 @@ import FloatingWhatsApp from './components/FloatingWhatsApp';
 import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
-import Gallery from './pages/Gallery';
+import NadiTypes from './pages/NadiTypes';
 import Contact from './pages/Contact';
 
 export default function App() {
@@ -35,7 +35,7 @@ export default function App() {
   // Scroll listener to update active section in navbar dynamically
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'services', 'gallery', 'contact'];
+      const sections = ['home', 'about', 'services', 'nadi-types', 'contact'];
       const scrollPos = window.scrollY + 200;
 
       for (let i = sections.length - 1; i >= 0; i--) {
@@ -73,8 +73,11 @@ export default function App() {
           onSelectService={handleSelectService}
         />
 
-        {/* 4. Photo Gallery Section */}
-        <Gallery />
+        {/* 4. Dedicated Types of Nadi Astrology Section */}
+        <NadiTypes
+          onScrollTo={scrollToSection}
+          onSelectService={handleSelectService}
+        />
 
         {/* 5. Contact Us Section */}
         <Contact preselectedService={preselectedService} />

@@ -10,12 +10,14 @@ import {
   Calendar,
   Sparkles,
   Globe,
-  Video,
+  Wifi,
   Award,
   CalendarCheck,
   Languages,
   Compass,
 } from 'lucide-react';
+import palmLeafImg from '../assets/WhatsApp Image 2026-09-30 at 5.40.01 PM.jpeg';
+import swamijiImg from '../assets/swamiji-guru.jpg';
 
 export default function Home({ onScrollTo }) {
   const whatsappUrl =
@@ -29,7 +31,7 @@ export default function Home({ onScrollTo }) {
           <div className="hero-text-content">
             <div className="badge-pill">
               <Sparkles size={14} className="badge-icon" />
-              <span>Sri Agathiya Mahasiva Nadi Jothida Nilayam</span>
+              <span>Sri Agasthiyar Maharishi Nadi Jothidam Nilayam</span>
             </div>
 
             <h1 className="hero-heading">
@@ -40,7 +42,7 @@ export default function Home({ onScrollTo }) {
             <p className="hero-subtext">
               Unveil your soul's journey etched thousands of years ago on sacred palm leaves by
               Sage Agathiyar. Consult with 3rd generation hereditary astrologers in person or
-              through online video call worldwide.
+              through online consultation worldwide.
             </p>
 
             <div className="hero-cta-row">
@@ -78,7 +80,7 @@ export default function Home({ onScrollTo }) {
               </div>
               <div className="feature-item">
                 <CheckCircle2 size={16} className="check-icon" />
-                <span>Online Video Consultation</span>
+                <span>Online Consultation</span>
               </div>
               <div className="feature-item">
                 <CheckCircle2 size={16} className="check-icon" />
@@ -90,8 +92,8 @@ export default function Home({ onScrollTo }) {
           <div className="hero-image-wrap">
             <div className="hero-image-frame">
               <img
-                src="/images/hero.jpg"
-                alt="Vaitheeswaran Koil Nadi Astrologer with Sacred Palm Leaves"
+                src={swamijiImg}
+                alt="Divine Spiritual Master - Sri Agasthiyar Maharishi Nadi Jothidam Nilayam"
                 className="hero-main-img"
               />
               <div className="hero-image-overlay-card">
@@ -159,7 +161,7 @@ export default function Home({ onScrollTo }) {
             <div className="img-side">
               <div className="image-stack">
                 <img
-                  src="/images/palm-leaves.jpg"
+                  src={palmLeafImg}
                   alt="Ancient Nadi Palm Leaf Manuscript with Stylus"
                   className="stack-img-main"
                 />
@@ -236,7 +238,7 @@ export default function Home({ onScrollTo }) {
               <div className="step-circle">3</div>
               <div className="step-card-content">
                 <h4>Fact Verification</h4>
-                <p>Live video or phone session to verify family verses and confirm your leaf.</p>
+                <p>Live online or phone session to verify family verses and confirm your leaf.</p>
               </div>
             </div>
 
@@ -284,7 +286,7 @@ export default function Home({ onScrollTo }) {
             <div className="why-card">
               <div className="why-card-top">
                 <div className="why-icon-box">
-                  <Video size={22} />
+                  <Wifi size={22} />
                 </div>
                 <span className="why-step-num">02</span>
               </div>

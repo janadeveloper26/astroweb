@@ -35,11 +35,11 @@ const defaultReviews = [
   {
     id: "rev-4",
     name: "Senthil Nathan & Priya",
-    location: "Singapore (Online Video Consultation)",
+    location: "Singapore (Online Consultation)",
     kandam: "5th Kandam (Putra Bhakyam)",
     rating: 5,
     date: "2026-09-22",
-    comment: "Living in Singapore, we sent our thumb impressions online via WhatsApp. The online leaf search was so authentic and detailed over video call with clear Tamil and English translation. We received the recorded audio promptly.",
+    comment: "Living in Singapore, we sent our thumb impressions online via WhatsApp. The online leaf search was so authentic and detailed online with clear Tamil and English translation. We received the recorded audio promptly.",
     verified: true,
   },
 ];

@@ -1,87 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import {
   MapPin,
   Phone,
   Mail,
   Clock,
   MessageCircle,
-  Send,
-  CheckCircle,
+  Navigation,
+  ExternalLink,
+  Sparkles,
 } from 'lucide-react';
-import confetti from 'canvas-confetti';
 
-export default function Contact({ preselectedService }) {
-  const [name, setName] = useState('');
-  const [phone, setPhone] = useState('');
-  const [email, setEmail] = useState('');
-  const [subject, setSubject] = useState('Nadi Astrology Consultation Enquiry');
-  const [message, setMessage] = useState('');
-  const [submitting, setSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
-
-  useEffect(() => {
-    if (preselectedService) {
-      setSubject(`Enquiry about ${preselectedService}`);
-    }
-  }, [preselectedService]);
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setSubmitting(true);
-
-    try {
-      const payload = {
-        name,
-        phone,
-        email,
-        subject,
-        message,
-        timestamp: new Date().toISOString(),
-      };
-
-      // Save locally
-      try {
-        const existing = JSON.parse(localStorage.getItem('astroweb_inquiries') || '[]');
-        existing.push(payload);
-        localStorage.setItem('astroweb_inquiries', JSON.stringify(existing));
-      } catch (e) {
-        // ignore
-      }
-
-      // Try backend if available (optional, won't break if offline)
-      try {
-        await fetch('http://localhost:5000/api/inquiries', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload),
-        });
-      } catch (err) {
-        // Backend not running, proceed gracefully
-      }
-
-      // Format WhatsApp message to directly notify Guruji
-      const text = `*New Consultation Enquiry - Astroweb*%0A%0A*Name:* ${encodeURIComponent(
-        name
-      )}%0A*Phone:* ${encodeURIComponent(phone)}%0A*Email:* ${encodeURIComponent(
-        email || 'Not provided'
-      )}%0A*Subject:* ${encodeURIComponent(subject)}%0A*Message:* ${encodeURIComponent(
-        message
-      )}`;
-      const waUrl = `https://wa.me/918838972528?text=${text}`;
-
-      // Open WhatsApp in new tab for direct consultation
-      window.open(waUrl, '_blank');
-
-      setSubmitted(true);
-      confetti({
-        particleCount: 80,
-        spread: 60,
-        origin: { y: 0.6 },
-      });
-    } finally {
-      setSubmitting(false);
-    }
-  };
+export default function Contact() {
+  const googleMapsUrl =
+    'https://maps.google.com/?q=2/75,+Edakudi+thenpathi,+Vaitheeshwarankovil';
+  const whatsappLocationUrl =
+    'https://wa.me/918838972528?text=Hello%20Guruji,%20please%20guide%20me%20with%20the%20sanctum%20location%20and%20directions%20to%20Vaitheeshwarankovil.';
 
   return (
     <section id="contact" className="section-padded bg-soft contact-section-wrap">
@@ -91,11 +24,11 @@ export default function Contact({ preselectedService }) {
           <span className="section-tag">Reach Out</span>
           <h2 className="section-title">Contact Us</h2>
           <p className="section-desc">
-            Get in touch with Astroweb (Sri Agathiya Mahasiva Nadi Jothida Nilayam) at Vaitheeswaran Kovil
+            Get in touch with Astroweb (Sri Agasthiyar Maharishi Nadi Jothidam Nilayam) at Vaitheeswaran Kovil
           </p>
         </div>
 
-        {/* Main Grid */}
+        {/* Main Grid: Details on Left, Map on Right */}
         <div className="contact-grid-clean">
           {/* Left Column: Sanctum Address & Details */}
           <div className="contact-details-col">
@@ -114,7 +47,7 @@ export default function Contact({ preselectedService }) {
                   <p>
                     Guruji V.prakash Shivam<br />
                     2/75, Edakudi thenpathi,<br />
-                    Vaitheeshwarankovil
+                    Vaitheeshwarankovil, Mayiladuthurai District, Tamil Nadu - 609117
                   </p>
                 </div>
               </div>
@@ -174,136 +107,57 @@ export default function Contact({ preselectedService }) {
                 </div>
               </div>
             </div>
-
-            {/* Map */}
-            <div className="clean-map-container">
-              <iframe
-                title="Vaitheeshwarankovil Map - Guruji V.prakash Shivam"
-                src="https://maps.google.com/maps?q=2%2F75%2C%20Edakudi%20thenpathi%2C%20Vaitheeshwarankovil&t=m&z=15&output=embed&iwloc=near"
-                width="100%"
-                height="250"
-                style={{ border: 0 }}
-                allowFullScreen=""
-                loading="lazy"
-              ></iframe>
-            </div>
           </div>
 
-          {/* Right Column: Normal Contact Form */}
-          <div className="contact-form-col">
-            <div className="form-card-clean">
-              <h3>Send Us A Message</h3>
-              <p className="form-desc-text">
-                Fill in your details below and our team will get back to you promptly.
-              </p>
-
-              {submitted ? (
-                <div className="booking-confirmed-box">
-                  <CheckCircle size={52} className="check-success" />
-                  <h4>Thank You!</h4>
-                  <p>
-                    Your enquiry has been received and opened on WhatsApp. Guruji's team will contact you promptly.
-                  </p>
-                  <div style={{ display: 'flex', gap: '0.75rem', justifyContent: 'center', marginTop: '1.25rem', flexWrap: 'wrap' }}>
-                    <a
-                      href="https://wa.me/918838972528"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn-whatsapp"
-                      style={{ padding: '0.65rem 1.25rem' }}
-                    >
-                      <MessageCircle size={16} />
-                      <span>Chat on WhatsApp</span>
-                    </a>
-                    <button
-                      onClick={() => {
-                        setSubmitted(false);
-                        setName('');
-                        setPhone('');
-                        setEmail('');
-                        setMessage('');
-                      }}
-                      className="btn-secondary"
-                      style={{ padding: '0.65rem 1.25rem' }}
-                    >
-                      Send Another Message
-                    </button>
-                  </div>
+          {/* Right Column: Google Map in place of Send Us A Message Form */}
+          <div className="contact-map-col">
+            <div className="map-card-clean">
+              <div className="map-card-header">
+                <div className="badge-pill mb-2" style={{ display: 'inline-flex' }}>
+                  <Sparkles size={14} className="badge-icon" />
+                  <span>Sacred Temple Sanctum</span>
                 </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="clean-booking-form">
-                  <div className="form-row-2">
-                    <div className="form-field">
-                      <label>Your Name *</label>
-                      <input
-                        type="text"
-                        required
-                        placeholder="Your name"
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
-                        className="input-box"
-                      />
-                    </div>
+                <h3>Sanctum Location Map</h3>
+                <p className="map-desc-text">
+                  Locate Guruji V.prakash Shivam at Vaitheeshwarankovil. Click below for live turn-by-turn navigation or guidance.
+                </p>
+              </div>
 
-                    <div className="form-field">
-                      <label>Phone Number *</label>
-                      <input
-                        type="tel"
-                        required
-                        placeholder="Phone number"
-                        value={phone}
-                        onChange={(e) => setPhone(e.target.value)}
-                        className="input-box"
-                      />
-                    </div>
-                  </div>
+              <div className="map-embed-wrapper">
+                <iframe
+                  title="Vaitheeshwarankovil Map - Sri Agasthiyar Maharishi Nadi Jothidam Nilayam"
+                  src="https://maps.google.com/maps?q=2%2F75%2C%20Edakudi%20thenpathi%2C%20Vaitheeshwarankovil&t=m&z=15&output=embed&iwloc=near"
+                  width="100%"
+                  height="360"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
 
-                  <div className="form-row-2">
-                    <div className="form-field">
-                      <label>Email Address</label>
-                      <input
-                        type="email"
-                        placeholder="Email (optional)"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        className="input-box"
-                      />
-                    </div>
+              <div className="map-card-actions">
+                <a
+                  href={googleMapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary map-directions-btn"
+                >
+                  <Navigation size={16} />
+                  <span>Open in Google Maps</span>
+                  <ExternalLink size={14} />
+                </a>
 
-                    <div className="form-field">
-                      <label>Subject</label>
-                      <input
-                        type="text"
-                        placeholder="Subject"
-                        value={subject}
-                        onChange={(e) => setSubject(e.target.value)}
-                        className="input-box"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="form-field">
-                    <label>Message *</label>
-                    <textarea
-                      required
-                      rows={3}
-                      placeholder="Write your message or inquiry here..."
-                      value={message}
-                      onChange={(e) => setMessage(e.target.value)}
-                      className="input-box"
-                    ></textarea>
-                  </div>
-
-                  <button
-                    type="submit"
-                    disabled={submitting}
-                    className="btn-primary w-100"
-                  >
-                    <Send size={15} />
-                    <span>{submitting ? 'Sending...' : 'Send Message'}</span>
-                  </button>
-                </form>
-              )}
+                <a
+                  href={whatsappLocationUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-whatsapp map-whatsapp-btn"
+                >
+                  <MessageCircle size={16} />
+                  <span>Directions on WhatsApp</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>

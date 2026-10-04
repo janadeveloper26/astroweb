@@ -5,8 +5,8 @@ import SacredAudio from './SacredAudio';
 export default function FloatingActions({ lang, onOpenBooking }) {
   const whatsappUrl = `https://wa.me/918838972528?text=${encodeURIComponent(
     lang === 'ta'
-      ? 'வணக்கம் குருஜி, நான் வைத்தீஸ்வரன் கோவில் அகத்திய மகாசிவ நாடி ஜோதிடம் பார்க்க விரும்புகிறேன்.'
-      : 'Pranam Guruji, I would like to consult Sri Agathiya Mahasiva Nadi Palm Leaf reading.'
+      ? 'வணக்கம் குருஜி, நான் வைத்தீஸ்வரன் கோவில் ஸ்ரீ அகத்தியர் மகரிஷி நாடி ஜோதிடம் பார்க்க விரும்புகிறேன்.'
+      : 'Pranam Guruji, I would like to consult Sri Agasthiyar Maharishi Nadi Jothidam Nilayam Palm Leaf reading.'
   )}`;
 
   return (

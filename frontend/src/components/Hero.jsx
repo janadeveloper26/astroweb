@@ -4,7 +4,7 @@ import { Sparkles, Calendar, MessageCircle, ArrowRight, ShieldCheck, CheckCircle
 export default function Hero({ t, lang, onOpenBooking }) {
   const whatsappUrl = `https://wa.me/918838972528?text=${encodeURIComponent(
     lang === 'ta'
-      ? 'வணக்கம் குருஜி, நான் ஸ்ரீ அகத்திய மகாசிவ நாடி ஜோதிடம் ஆன்லைன் மூலம் பார்க்க விரும்புகிறேன். தயவுசெய்து வழிகாட்டவும்.'
+      ? 'வணக்கம் குருஜி, நான் ஸ்ரீ அகத்தியர் மகரிஷி நாடி ஜோதிடம் ஆன்லைன் மூலம் பார்க்க விரும்புகிறேன். தயவுசெய்து வழிகாட்டவும்.'
       : 'Pranam Guruji, I would like to book an authentic Nadi Palm Leaf reading consultation. Please guide me.'
   )}`;
 
@@ -39,8 +39,8 @@ export default function Hero({ t, lang, onOpenBooking }) {
             <span className="pulse-indicator"></span>
             <span className="live-status-text">
               {lang === 'ta'
-                ? 'இன்றைய சுவடித் தேடுதல் மற்றும் ஆன்லைன் வீடியோ ஆலோசனை நேரலை திறப்பில் உள்ளது'
-                : 'Live Palm Leaf Archives & Video Consultation Open Today (8 AM – 9 PM IST)'}
+                ? 'இன்றைய சுவடித் தேடுதல் மற்றும் ஆன்லைன் ஆலோசனை நேரலை திறப்பில் உள்ளது'
+                : 'Live Palm Leaf Archives & Online Consultation Open Today (8 AM – 9 PM IST)'}
             </span>
           </div>
 
@@ -81,7 +81,7 @@ export default function Hero({ t, lang, onOpenBooking }) {
             </div>
             <div className="trust-pill">
               <CheckCircle2 size={16} className="trust-check" />
-              <span>{lang === 'ta' ? 'வாட்ஸ்அப் வீடியோ நேரலை' : 'WhatsApp Video Live Reading'}</span>
+              <span>{lang === 'ta' ? 'வாட்ஸ்அப் ஆன்லைன் நேரலை' : 'WhatsApp Online Live Reading'}</span>
             </div>
             <div className="trust-pill">
               <CheckCircle2 size={16} className="trust-check" />
@@ -116,7 +116,7 @@ export default function Hero({ t, lang, onOpenBooking }) {
               </li>
               <li>
                 <span className="gold-bullet">✦</span>
-                <span>{lang === 'ta' ? 'ஆடியோ/வீடியோ பதிவு உடனுக்குடன் வழங்கப்படும்' : 'Full Audio & Translated Note Provided'}</span>
+                <span>{lang === 'ta' ? 'முழுமையான பதிவு உடனுக்குடன் வழங்கப்படும்' : 'Full Audio & Translated Note Provided'}</span>
               </li>
               <li>
                 <span className="gold-bullet">✦</span>

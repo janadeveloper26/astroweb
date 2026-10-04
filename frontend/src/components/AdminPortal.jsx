@@ -233,7 +233,7 @@ export default function AdminPortal({ isOpen, onClose, lang }) {
                       <td>
                         <a
                           href={`https://wa.me/${b.phone.replace(/[^0-9]/g, '')}?text=${encodeURIComponent(
-                            `Pranam ${b.name}, this is Sri Agathiya Mahasiva Nadi Jothida Nilayam regarding your consultation (Ref: ${b.id}).`
+                            `Pranam ${b.name}, this is Sri Agasthiyar Maharishi Nadi Jothidam Nilayam regarding your consultation (Ref: ${b.id}).`
                           )}`}
                           target="_blank"
                           rel="noopener noreferrer"

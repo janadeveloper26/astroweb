@@ -30,7 +30,7 @@ export default function BookingModal({ isOpen, onClose, lang, t, preselectedKand
   const [dob, setDob] = useState('');
   const [pob, setPob] = useState('');
   const [preferredLanguage, setPreferredLanguage] = useState('Tamil');
-  const [mode, setMode] = useState('Online Video Call (WhatsApp)');
+  const [mode, setMode] = useState('Online (WhatsApp)');
   const [date, setDate] = useState(new Date().toISOString().split('T')[0]);
   const [timeSlot, setTimeSlot] = useState('Morning: 9:00 AM - 12:00 PM');
   const [notes, setNotes] = useState('');
@@ -493,7 +493,7 @@ export default function BookingModal({ isOpen, onClose, lang, t, preselectedKand
                       onChange={(e) => setMode(e.target.value)}
                       className="form-select"
                     >
-                      <option value="Online Video Call (WhatsApp)">{t.modal.modeOnline}</option>
+                      <option value="Online (WhatsApp)">{t.modal.modeOnline}</option>
                       <option value="In-Person (Vaitheeswaran Koil Nilayam)">{t.modal.modeInPerson}</option>
                     </select>
                   </div>
